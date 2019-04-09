@@ -1,0 +1,54 @@
+{
+  "name": "snippet-creator",
+  "displayName": "Snippet Creator",
+  "description": "Create snippets quickly. Auto-detects language.",
+  "version": "0.0.1",
+  "author": {
+    "name": "Ryan Olson",
+    "url": "https://github.com/ryanolsonx",
+    "email": "ryolson@me.com"
+  },
+  "keywords": [
+    "snippet",
+    "creation"
+  ],
+  "engines": {
+    "vscode": "^1.30.0"
+  },
+  "categories": [
+    "Snippets",
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.createSnippet"
+  ],
+  "main": "./src/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.createSnippet",
+        "title": "Create Snippet"
+      }
+    ]
+  },
+  "scripts": {
+    "postinstall": "node ./node_modules/vscode/bin/install"
+  },
+  "dependencies": {
+    "jsonc-parser": "^2.0.3"
+  },
+  "devDependencies": {
+    "@types/mocha": "^2.2.42",
+    "@types/node": "^8.10.25",
+    "prettier": "^1.16.4",
+    "vscode": "^1.1.25"
+  },
+  "homepage": "https://github.com/ryanolsonx/snippet-creator",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ryanolsonx/snippet-creator"
+  },
+  "bugs": {
+    "url": "https://github.com/ryanolsonx/snippet-creator/issues"
+  }
+}
