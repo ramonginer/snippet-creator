@@ -7,7 +7,10 @@ const writeSnippet = require('./writeSnippet');
  */
 function activate(context) {
   context.subscriptions.push(
-    vscode.commands.registerCommand('extension.createSnippet', createSnippet)
+    vscode.commands.registerCommand(
+      'snippet-creator.createSnippet',
+      createSnippet
+    )
   );
 }
 

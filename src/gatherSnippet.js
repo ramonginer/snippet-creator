@@ -1,8 +1,5 @@
 const vscode = require('vscode');
-
-function createBody(code) {
-  return code.replace(/\t/g, '\\t').split('\n');
-}
+const { createBody } = require('./utils');
 
 async function gatherSnippet() {
   const editor = vscode.window.activeTextEditor;
@@ -27,7 +24,10 @@ async function gatherSnippet() {
     language: editor.document.languageId,
     prefix,
     description,
-    body: createBody(editor.document.getText(selection))
+    body: createBody(
+      editor.document.getText(selection),
+      editor.document.languageId
+    )
   };
 }
 
