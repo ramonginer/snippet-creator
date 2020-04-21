@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.1.2
+
+### Added
+
+- Screenshot GIF to README
+
 ## 0.1.1
 
 ### Fixed
