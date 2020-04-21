@@ -1,4 +1,4 @@
-function sanitizePowershell(code) {
+function sanitizeDollarSigns(code) {
   const replaceKey = 'THISWILLBEREPLACED';
   return (
     code
@@ -14,10 +14,11 @@ function sanitizePowershell(code) {
 }
 
 function cleanBody(code, languageId) {
-  if (languageId === 'powershell') {
-    return sanitizePowershell(code.replace(/\t/g, '\\t'));
+  const codeWithEscapedTabs = code.replace(/\t/g, '\\t');
+  if (languageId === 'powershell' || languageId === 'php') {
+    return sanitizeDollarSigns(codeWithEscapedTabs);
   } else {
-    return code.replace(/\t/g, '\\t');
+    return codeWithEscapedTabs;
   }
 }
 
@@ -29,5 +30,5 @@ function createBody(code, languageId) {
 
 module.exports = {
   createBody,
-  sanitizePowershell
+  sanitizeDollarSigns
 };
