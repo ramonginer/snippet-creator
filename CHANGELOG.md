@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.1.3
+
+### Changed
+
+- Expanded $ escaping to all languages
+
 ## 0.1.2
 
 ### Added

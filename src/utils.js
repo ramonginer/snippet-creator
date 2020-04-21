@@ -13,19 +13,8 @@ function sanitizeDollarSigns(code) {
   );
 }
 
-function cleanBody(code, languageId) {
-  const codeWithEscapedTabs = code.replace(/\t/g, '\\t');
-  if (languageId === 'powershell' || languageId === 'php') {
-    return sanitizeDollarSigns(codeWithEscapedTabs);
-  } else {
-    return codeWithEscapedTabs;
-  }
-}
-
 function createBody(code, languageId) {
-  const body = cleanBody(code, languageId);
-
-  return body.split('\n');
+  return sanitizeDollarSigns(code.replace(/\t/g, '\\t')).split('\n');
 }
 
 module.exports = {
