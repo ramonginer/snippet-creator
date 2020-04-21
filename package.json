@@ -2,7 +2,7 @@
 	"name": "snippet-creator",
 	"displayName": "Snippet Creator",
 	"description": "Create snippets quickly. Auto-detects language.",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"author": {
 		"name": "Ryan Olson",
 		"url": "https://github.com/ryanolsonx",
